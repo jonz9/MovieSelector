@@ -10,20 +10,32 @@
 <body>
   <form action="#">
     <label for="select-movies">Select Movies</label>
-    <select name="movies" id="select-bar">
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
+    <select name="movies">
+      <option value="502356">The Super Mario Bros. Movie</option>
+      <option value="677179">Creed III</option>
+      <option value="76600">Avatar: The Way of Water</option>
+      <option value="638974">Murder Mystery 2</option>
+      <option value="594767">Shazam! Fury of the Gods</option>
+      <option value="816904">Momias</option>
+      <option value="603692">John Wick: Chapter 4</option>
+      <option value="758323">The Pope's Exorcist</option>
+      <option value="315162">Puss in Boots: The Last Wish</option>
+      <option value="842945">Supercell</option>
     </select>
   </form>
-  <button class="get-button">Get Movie</button>
+
+  <button id="getbutton" onclick="getMovie()">Get Movie</button>
+
+  <section id="movie-info">
+    <img src="" class="poster">
+    <h1 id="title"></h1>
+    <h4 id="genres"></h4>
+    <h5 id="popularity"></h5>
+    <h5 id="release-date"></h5>
+    <h5 id="average-score"></h5>
+    <h5 id="average-vote"></h5>
+    <p id="overview"></p>
+  </section>
 
   <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   <script type="module" src="script.js"></script>
