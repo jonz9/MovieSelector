@@ -15,6 +15,8 @@ getbutton.addEventListener("click", async () => {
     document.body.style.backgroundRepeat = `no-repeat`;
     document.body.style.backgroundSize = `cover`;
     movieSection.style.backgroundColor = `black`;
+    container.style.backgroundColor = `rgba(0, 0, 0, 0.8)`;
+    
 
     document.getElementById("title").innerHTML = movieSelected.title;
     document.getElementById("poster").src = `https://image.tmdb.org/t/p/w500${movieSelected.poster_path}`;
@@ -25,7 +27,10 @@ getbutton.addEventListener("click", async () => {
     document.getElementById("genres").innerHTML = `Genre: ${movieSelected.genres[0].name}`;
     document.getElementById("overview").innerHTML = `Synopsis: ${movieSelected.overview}`;
 
-    const trailer = await getTMDBData(`https://api.themoviedb.org/3//movie/${movieSelected.value}/videos?api_key=${APIkey}&language=en-US&adult=false`).results.filter((trailer) => trailer.type === "Trailer");
-    document.getElementById("trailer").src = `https://www.youtube.com/watch?v=${trailer.at(0).key}`;
+    let trailerData = await getTMDBData(`https://api.themoviedb.org/3//movie/${movies.options[movies.selectedIndex].value}/videos?api_key=${APIkey}&language=en-US&adult=false`);
+    let trailer = trailerData.results.filter((trailer) => {
+      return trailer.type === "Trailer";
+    });
+    document.getElementById("trailer").src = `https://www.youtube.com/embed/${trailer.at(0).key}`;
   });
 });

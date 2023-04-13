@@ -13,7 +13,7 @@ body {
 
 #container {
   height: 100vh;
-  width: 100%;
+  /* width: 100vw; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,7 +24,7 @@ body {
 }
 
 #movie-section {
-  margin: 5em;
+  margin: 3em;
   display: flex;
   flex-direction: row;
   max-width: 60em;
@@ -37,5 +37,9 @@ body {
 #movie-info {
   justify-content: center;
   align-items: center;
+}
+
+#trailer {
+  bottom: 2em;
 }
 
