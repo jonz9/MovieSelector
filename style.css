@@ -5,16 +5,37 @@
 }
 
 body {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: blanchedalmond;
+}
+
+#container {
+  height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 2em;
+  gap: 0.5em;
+  color: aliceblue;
+}
+
+#movie-section {
+  margin: 5em;
+  display: flex;
+  flex-direction: row;
+  max-width: 60em;
+}
+
+#poster {
+  max-height: 30em;
 }
 
 #movie-info {
-  border-style: solid;
-  border-width: 0.3em;
-  border-left-width: 0.8em;
-  border-right-width: 0.8em;
-  border-color: black;
+  justify-content: center;
+  align-items: center;
 }
+

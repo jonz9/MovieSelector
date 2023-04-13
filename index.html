@@ -3,38 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Movie Selector</title>
 </head>
 <body>
-  <form action="#">
-    <label for="select-movies">Select Movies</label>
-    <select id="select">
-      <option value="502356">The Super Mario Bros. Movie</option>
-      <option value="677179">Creed III</option>
-      <option value="76600">Avatar: The Way of Water</option>
-      <option value="638974">Murder Mystery 2</option>
-      <option value="594767">Shazam! Fury of the Gods</option>
-      <option value="816904">Momias</option>
-      <option value="603692">John Wick: Chapter 4</option>
-      <option value="758323">The Pope's Exorcist</option>
-      <option value="315162">Puss in Boots: The Last Wish</option>
-      <option value="842945">Supercell</option>
-    </select>
-  </form>
-
-  <button id="getbutton">Get Movie</button>
-
-  <section id="movie-info">
-    <img src="" id="poster">
-    <h1 id="title"></h1>
-    <h4 id="genres"></h4>
-    <h5 id="popularity"></h5>
-    <h5 id="release-date"></h5>
-    <h5 id="average-score"></h5>
-    <p id="overview"></p>
-    <iframe id="trailer" src="" frameborder="0"></iframe>
+  <section id="container">
+    <form action="#" id="navbar">
+      <label for="select-movies">Select Movies</label>
+      <select id="select">
+        <option value="502356">The Super Mario Bros. Movie</option>
+        <option value="677179">Creed III</option>
+        <option value="76600">Avatar: The Way of Water</option>
+        <option value="638974">Murder Mystery 2</option>
+        <option value="594767">Shazam! Fury of the Gods</option>
+        <option value="816904">Momias</option>
+        <option value="603692">John Wick: Chapter 4</option>
+        <option value="758323">The Pope's Exorcist</option>
+        <option value="315162">Puss in Boots: The Last Wish</option>
+        <option value="842945">Supercell</option>
+      </select>
+      <button id="getbutton">Get Movie</button>
+    </form>
+  
+    <section id="movie-section">
+      <img src="" id="poster">
+      <div class="movie-info">
+        <h1 id="title"></h1>
+        <br>
+        <h5 id="average-score"></h5>
+        <h5 id="popularity"></h5>
+        <h5 id="runtime"></h5>
+        <h5 id="release-date"></h5>
+        <h5 id="genres"></h5>
+        <br>
+        <p id="overview"></p>
+        <iframe id="trailer" src="" frameborder="0"></iframe>
+      </div> 
+    </section>
   </section>
 
   <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
