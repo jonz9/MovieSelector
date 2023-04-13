@@ -7,16 +7,13 @@ getbutton.addEventListener("click", async () => {
   let movies = document.getElementById("select");
   let movieSelected = await getTMDBData(`https://api.themoviedb.org/3/movie/${movies.options[movies.selectedIndex].value}?api_key=${APIkey}&language=en-US`)
   .then(async (movieSelected) => {
-    
-    console.log(movieSelected)
-    let movieSection = document.getElementById("movie-section");
-    let container = document.getElementById("container")
+    console.log(movieSelected);
     document.body.style.backgroundImage = `url(https://image.tmdb.org/t/p/w500${movieSelected.backdrop_path})`
     document.body.style.backgroundRepeat = `no-repeat`;
     document.body.style.backgroundSize = `cover`;
-    movieSection.style.backgroundColor = `black`;
-    container.style.backgroundColor = `rgba(0, 0, 0, 0.8)`;
-    
+    document.getElementById("movie-section").style.backgroundColor = `black`;
+    document.getElementById("movie-section").style.borderColor = `bisque`;
+    document.getElementById("container").style.backgroundColor = `rgba(0, 0, 0, 0.6)`;
 
     document.getElementById("title").innerHTML = movieSelected.title;
     document.getElementById("poster").src = `https://image.tmdb.org/t/p/w500${movieSelected.poster_path}`;
@@ -24,6 +21,7 @@ getbutton.addEventListener("click", async () => {
     document.getElementById("popularity").innerHTML = `Popularity: ${movieSelected.vote_count}`;
     document.getElementById("runtime").innerHTML = `Runtime: ${movieSelected.runtime}`;
     document.getElementById("release-date").innerHTML = `Release Date: ${movieSelected.release_date}`;
+    document.getElementById("revenue").innerHTML = `Revenue: $${movieSelected.revenue}`;
     document.getElementById("genres").innerHTML = `Genre: ${movieSelected.genres[0].name}`;
     document.getElementById("overview").innerHTML = `Synopsis: ${movieSelected.overview}`;
 
