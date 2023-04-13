@@ -13,6 +13,7 @@ getbutton.addEventListener("click", async () => {
     document.body.style.backgroundSize = `cover`;
     document.getElementById("movie-section").style.backgroundColor = `black`;
     document.getElementById("movie-section").style.borderColor = `bisque`;
+    document.getElementById("movie-section").style.borderStyle = `double`;
     document.getElementById("container").style.backgroundColor = `rgba(0, 0, 0, 0.6)`;
 
     document.getElementById("title").innerHTML = movieSelected.title;
@@ -30,5 +31,8 @@ getbutton.addEventListener("click", async () => {
       return trailer.type === "Trailer";
     });
     document.getElementById("trailer").src = `https://www.youtube.com/embed/${trailer.at(0).key}`;
+    document.getElementById("trailer").style.top = `50%`;
+    document.getElementById("trailer").style.left = `50%`;
+
   });
 });
