@@ -7,7 +7,6 @@ getbutton.addEventListener("click", async () => {
   let movies = document.getElementById("select");
   let movieSelected = await getTMDBData(`https://api.themoviedb.org/3/movie/${movies.options[movies.selectedIndex].value}?api_key=${APIkey}&language=en-US`)
   .then(async (movieSelected) => {
-    console.log(movieSelected);
     document.body.style.backgroundImage = `url(https://image.tmdb.org/t/p/w500${movieSelected.backdrop_path})`
     document.body.style.backgroundRepeat = `no-repeat`;
     document.body.style.backgroundSize = `cover`;
