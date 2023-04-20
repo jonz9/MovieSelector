@@ -28,7 +28,7 @@ h1 {
 #movie-section {
   display: flex;
   flex-direction: row;
-  max-width: 50em;
+  max-width: 48em;
   border-radius: 0.5%;
 }
 
